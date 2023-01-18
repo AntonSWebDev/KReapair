@@ -214,6 +214,9 @@
 		color: $mainColor;
 	}
 }
+.bread-crumbs__link--active {
+	color: #F03957;
+}
 .bread-crumbs.about {
 	background: transparent;
 	.bread-crumbs__link {
@@ -224,6 +227,18 @@
 	}
 	.bread-crumbs__link--active {
 		color: $mainColor;
+	}
+}
+.bread-crumbs.audio {
+	background: transparent;
+	.bread-crumbs__link {
+		color: #A5A4A4;
+		& + a::before {
+			color: #A5A4A4;
+		}
+	}
+	.bread-crumbs__link--active {
+		color: #F03957;
 	}
 }
 .bread-crumbs.contacts {
@@ -238,6 +253,186 @@
 		color: $mainColor;
 	}
 }
+
+.repair {
+	background: #F7F5F5;
+	padding-top: 60px;
+	@media (min-width: 768px) {
+			padding-top: 80px;
+		}
+		@media (min-width: 1160px) {
+			padding-top: 100px;
+		}
+	&__top {
+		@media (min-width: 768px) {
+			display: flex;
+			justify-content: space-between;
+			gap: 20px;
+		}
+		@media (min-width: 1160px) {
+			
+		}
+	}
+	&__title {
+		margin-bottom: 30px;
+		font-size: 30px;
+		line-height: 52px;
+		@media (min-width: 768px) {
+			margin-bottom: 60px;
+			font-size: 35px;
+			line-height: 61px;
+			width: 49%;
+		}
+		@media (min-width: 1160px) {
+			font-size: 50px;
+			line-height: 88px;
+			margin-bottom: 105px
+		}
+	}
+	&__text {
+		font-size: 16px;
+		line-height: 28px;
+		@include inter600;
+		letter-spacing: -0.05em;
+		margin-bottom: 60px;
+		@media (min-width: 768px) {
+			width: 49%;
+		}
+		@media (min-width: 1160px) {
+			font-size: 18px;
+			line-height: 32px;
+		}
+	}
+	&__links {
+		@include inter600;
+		font-size: 18px;
+		line-height: 32px;
+		letter-spacing: -0.05em;
+		margin-bottom: 60px;
+		@media (min-width: 768px) {
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+		}
+		@media (min-width: 1160px) {
+			font-size: 20px;
+			line-height: 35px;
+			margin-bottom: 80px;
+		}
+	}
+	&__link {
+		background: #fff;
+		border-radius: 10px;
+		display: block;
+		width: 100%;
+		margin: 0 auto;
+		max-width: 354px;
+		position: relative;
+		padding: 25px 15px 25px 80px;
+		&::before {
+			position: absolute;
+			content: "";
+			left: 25px;
+			top: 0;
+			bottom: 0;
+			margin: auto 0;
+			width: 32px;
+			height: 16px;
+			background-image: url("./../img/repair-arrow.svg");
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: 0 0;
+		}
+		& + a {
+			margin-top: 20px;
+		}
+		@media (min-width: 768px) {
+			margin: unset;
+			margin-bottom: 20px;
+			max-width: 49%;
+			& + a {
+				margin-top: 0px
+			}
+		}
+		@media (min-width: 1160px) {
+			padding-left: 130px;
+			&::before {
+				left: 55px;
+			}
+		}
+	}
+	&__desc {
+		background: #fff;
+		padding-top: 40px;
+		padding-bottom: 60px;
+		@media (min-width: 768px) {
+			padding-top: 60px;
+			padding-bottom: 100px;
+		}
+		@media (min-width: 1160px) {
+			padding-top: 80px;
+			padding-bottom: 120px;
+		}
+	}
+	&__desc-title {
+		@include inter600;
+		font-size: 20px;
+		line-height: 35px;
+		margin-bottom: 20px;
+		letter-spacing: -0.05em;
+		span {
+			color: #F03957;
+		}
+		@media (min-width: 768px) {
+			margin-bottom: 30px;
+			font-size: 30px;
+			line-height: 52px;
+		}
+		@media (min-width: 1160px) {
+			margin-bottom: 50px;
+			font-size: 40px;
+			line-height: 70px;
+		}
+	}
+	&__desc-box {
+		@media (min-width: 768px) {
+			display: flex;
+		}
+		@media (min-width: 1160px) {
+
+		}
+	}
+	&__desc-col {
+		& + div {
+			margin-top: 20px;
+		}
+		@media (min-width: 768px) {
+			width: 50%;
+			& + div {
+				margin-top: 0px;
+				margin-left: 20px;
+			}
+		}
+		@media (min-width: 1160px) {
+
+		}
+	}
+	&__desc-text {
+		font-size: 16px;
+		line-height: 28px;
+		& + p {
+			margin-top: 20px;
+		}
+		@media (min-width: 768px) {
+			
+		}
+		@media (min-width: 1160px) {
+			font-size: 18px;
+			line-height: 32px;
+		}
+	}
+}
+
 
 .about {
 	&__top {
@@ -922,10 +1117,7 @@
 			}
 		}
 	}
-	
 }
-
-
 
 .top {
 	&__title {
