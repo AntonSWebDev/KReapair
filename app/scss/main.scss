@@ -424,7 +424,7 @@
 			margin-top: 20px;
 		}
 		@media (min-width: 768px) {
-			
+
 		}
 		@media (min-width: 1160px) {
 			font-size: 18px;
@@ -432,7 +432,169 @@
 		}
 	}
 }
-
+.price-repair {
+	&__top {
+		@media (min-width: 768px) {
+			display: flex;
+			h2 {
+				width: 50%;
+				margin-bottom: 80px;
+			}
+			p {
+				width: 50%;
+				font-size: 18px;
+				line-height: 32px;
+				margin-bottom: 80px;
+			}
+		}
+	}
+	&__title {
+		margin-bottom: 30px;
+	}
+	&__text {
+		font-size: 16px;
+		line-height: 28px;
+		letter-spacing: -0.05em;
+		margin-bottom: 40px;
+		@include inter600;
+	}
+	&__content {
+		@media (min-width: 768px) {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+		}
+	}
+	&__item {
+		& + div {
+			margin-top: 30px;
+		}
+		@media (min-width: 768px) {
+			margin-bottom: 30px;
+			width: 49%;
+			& + div {
+				margin-top: 0px;
+			}
+		}
+	}
+	&__item-title {
+		cursor: pointer;
+		background: #C4C4C4;
+		border-radius: 10px;
+		display: flex;
+		justify-content: space-between;
+		padding: 30px 15px;
+		@include inter600;
+		font-size: 14px;
+		line-height: 24px;
+		position: relative;
+		letter-spacing: -0.05em;
+		z-index: 1;
+		p:first-child {
+			width: 70%;
+			position: relative;
+			&::after {
+				position: absolute;
+				content: "";
+				background-image: url("./../img/price-repair.svg");
+				background-size: cover;
+				background-repeat: no-repeat;
+				background-position: 0 0;
+				width: 15px;
+				height: 6px;
+				left: 150px;
+				bottom: 0;
+				top: 0;
+				margin: auto 0;
+			}
+		}
+		p:last-child {
+			width: 30%;
+			text-align: right;
+		}
+		@media (min-width: 768px) {
+			font-size: 18px;
+			line-height: 31px;
+			p:first-child {
+				&::after { 
+					left: 200px;
+				}
+			}
+		}
+		@media (min-width: 1160px) {
+			font-size: 20px;
+			padding: 25px 30px;
+			line-height: 35px;
+			p:first-child {
+				&::after { 
+					left: 210px;
+				}
+			}
+		}
+	}
+	&__item-body {
+		margin-top: -20px;
+		background: #F7F5F5;
+		border-radius: 10px;
+		padding: 50px 15px;
+		@media (min-width: 1160px) {
+			padding: 50px 25px 30px;
+		}
+	}
+	&__item-row {
+		display: flex;
+		justify-content: space-between;
+		& + div {
+			margin-top: 30px;
+		}
+		p {
+			font-size: 14px;
+			line-height: 24px;
+			letter-spacing: -0.05em;
+		}
+		p:first-child {
+			width: 70%;
+		}
+		p:last-child {
+			text-align: right;
+			width: 30%;
+			@include inter600;
+		}
+		@media (min-width: 768px) {
+			p {
+				font-size: 16px;
+				line-height: 28px;
+			}
+		}
+		@media (min-width: 1160px) {
+			p {
+				font-size: 18px;
+				line-height: 32px;
+			}
+		}
+	}
+	&__btn-box {
+		@media (min-width: 1160px) {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+	}
+	&__item-btn {
+		margin: 0 auto;
+		display: block;
+		max-width: 320px;
+		& + a {
+			margin-top: 30px;
+		}
+		@media (min-width: 1160px) {
+			margin: unset;
+			& + a {
+				margin-top: 0px;
+			}
+		}
+	}
+}
 
 .about {
 	&__top {
@@ -1305,6 +1467,7 @@
 
 	}
 	&__sup-title {
+		display: block;
 		@include inter600;
 		font-size: 20px;
 		line-height: 35px;
@@ -1423,7 +1586,7 @@
 		 		}
 		 }
 		 .services__sup-title {
-			margin-bottom: 30px;
+				margin-bottom: 30px;
 			@media (min-width: 768px) {
 				margin-bottom: 30px;
 			}
