@@ -119,6 +119,9 @@ input[type="radio"].visually-hidden {
 .hidden {
 	visibility: hidden;
 }
+.hide {
+	display: none;
+}
 .modal-btn {
 	@include inter600;
 	font-size: 18px;

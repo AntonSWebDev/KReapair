@@ -13,6 +13,20 @@ jQuery(document).ready(function() {
 
 	$("[name=phone]").mask("+7 (499) 999-99-99"); 
 
+	$('.price__content-title').on('click', p_acc);
+
+	function p_acc(){
+  $('.price__content-body');
+   $(this).next().slideToggle(500);
+
+   const btn = $(this).find(".content-title__btn").toggleClass('act');
+
+   if (btn.hasClass('act')) {
+				btn.text("Свернуть");
+			} else {
+				btn.text("Развернуть");
+			};
+ }
 });
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 // Brends slider

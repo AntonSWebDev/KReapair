@@ -640,6 +640,293 @@
 	}
 }
 
+.price {
+	&__title {
+		margin-bottom: 42px;
+		@media (min-width: 768px) {
+			margin-bottom: 80px;
+		}
+		@media (min-width: 1160px) {
+			margin-bottom: 60px;
+		}
+		span {
+			display: inline-block;
+		}
+	}
+	&__content-title {
+		max-width: 1220px;
+		margin: 0 auto;
+	}
+	&__content-body {
+		max-width: 1220px;
+		margin: 0 auto;
+	}
+}
+.content-title {
+		cursor: pointer;
+		border: 1px solid #DFDFDF;
+		border-bottom: none;
+		padding: 40px 10px;
+		@media (min-width: 768px) {
+			padding: 40px 20px;
+			display: flex;
+			position: relative;
+			justify-content: space-between;
+			button {
+				position: absolute;
+				bottom: 25px;
+				right: 45px;
+			}
+			ol {
+				width: 50%;
+			}
+		}
+		@media (min-width: 1160px) {
+			padding: 60px 30px;
+			button {
+				top: 80px;
+				right: 115px;
+				bottom: unset;
+			}
+			ol {
+				font-size: 18px;
+				line-height: 32px;
+			}
+		}
+	&__title {
+		@include inter600;
+		font-size: 20px;
+		line-height: 35px;
+		letter-spacing: -0.05em;
+		margin-bottom: 30px;
+		span {
+			font-size: 16px;
+			line-height: 28px;
+			display: block;
+			margin-top: 10px;
+		}
+		@media (min-width: 768px) {
+			font-size: 30px;
+			line-height: 52px;
+			span {
+				font-size: 18px;
+				line-height: 32px;
+			}
+			@media (min-width: 1160px) {
+				font-size: 40px;
+				line-height: 70px;
+				span {
+					font-size: 20px;
+					line-height: 35px;
+				}
+			}
+		}
+	}
+	&__list {
+		font-size: 16px;
+		line-height: 28px;
+		letter-spacing: -0.05em;
+		margin-bottom: 30px;
+	}
+	&__item {
+		& + li {
+			margin-top: 15px;
+		}
+	}
+	&__btn {
+		@include inter600;
+		font-size: 16px;
+		line-height: 28px;
+		letter-spacing: -0.05em;
+		background: transparent;
+		border: none;
+		color: #817979;
+		position: relative;
+		padding-right: 25px;
+		&::after {
+			content: "";
+			position: absolute;
+			background-image: url("./../img/price-arrow-down.svg");
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+			width: 14px;
+			height: 7px;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			margin: auto 0;
+		}
+		@media (min-width: 1160px) {
+			font-size: 18px;
+			line-height: 32px;
+		}
+	}
+}
+.content-title__btn.act {
+	&::after {
+		background-image: url("./../img/price-arrow-up.svg");
+	}
+}
+.content-body {
+	padding: 40px 10px;
+	background-color: #F7F5F5;
+	@media (min-width: 768px) {
+		padding: 40px 35px;
+	}
+	@media (min-width: 1160px) {
+		padding: 60px 30px;
+	}
+	&__title {
+		font-size: 12px;
+		line-height: 21px;
+		letter-spacing: -0.05em;
+		color: #9A9696;
+		margin-bottom: 35px;
+		position: relative;
+		@media (min-width: 768px) {
+			display: flex;
+			justify-content: space-between;
+		}
+	}
+	&__info {
+		position: absolute;
+		background: #fff;
+		box-shadow: 10px 0px 50px 34px rgba(211, 211, 211, 0.25);
+		border-radius: 15px;
+		z-index: 1;
+		padding: 30px 25px;
+		top: -190px;
+		font-size: 12px;
+		line-height: 18px;
+		color: #000000;
+		visibility: hidden;
+		width: 300px;
+		height: 165px;
+		display: inline-block;
+		opacity: 0;
+		transition: all .5s ease;
+	}
+	&__cat {
+		margin-bottom: 20px;
+		position: relative;
+		display: inline-block;
+		padding-right: 55px;
+		position: relative;
+		img {
+			position: absolute;
+			right: 0;
+			width: 23px;
+			height: 23px;
+			display: block;
+		}
+		&:hover {
+			.content-body__info {
+				visibility: visible;
+				opacity: 1;
+			}
+		}
+		@media (min-width: 768px) {
+			font-size: 16px;
+			margin-bottom: 50px;
+			line-height: 28px;
+		}
+		
+	}
+	&__box {
+		display: flex;
+		@media (min-width: 768px) {
+			width: 50%;
+		}
+	}
+	&__age {
+		& + p {
+			margin-left: 20px;
+		}
+		@media (min-width: 768px) {
+			font-size: 16px;
+			line-height: 28px;
+			& + p {
+				margin-left: 35px;
+			}
+		}
+		@media (min-width: 1160px) {
+			& + p {
+				margin-left: 110px;
+			}
+		}
+	}
+	&__item {
+		& + div {
+			margin-top: 35px;
+		}
+		@media (min-width: 768px) {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			& + div {
+				margin-top: 30px;
+			}
+		}
+	}
+	&__difficulty {
+		margin-bottom: 25px;
+		h3 {
+			@include inter600;
+			font-size: 18px;
+			line-height: 32px;
+			letter-spacing: -0.05em;
+			margin-bottom: 8px;
+		}
+		p {
+			font-size: 16px;
+			line-height: 28px;
+			max-width: 370px;
+			letter-spacing: -0.05em;
+		}
+		@media (min-width: 1160px) {
+			h3 {
+				font-size: 20px;
+				line-height: 35px;
+			}
+			p {
+				font-size: 18px;
+				line-height: 32px;
+			}
+		}
+	}
+	&__price {
+		display: flex;
+		p {
+			@include inter600;
+			font-size: 16px;
+			line-height: 28px;
+			letter-spacing: -0.05em;
+		}
+		p + p {
+			margin-left: 35px;
+		}
+		@media (min-width: 768px) {
+			width: 50%;
+			p {
+				font-size: 18px;
+				line-height: 32px;
+			}
+			p + p {
+				margin-left: 75px;
+			}
+		}
+		@media (min-width: 1160px) {
+			p + p {
+				margin-left: 150px;
+			}
+		}
+	}
+	
+}
+
+
+
 .top {
 	&__title {
 		@include montserrat700;
@@ -688,7 +975,7 @@
 			display: flex;
 			align-items: center;
 			justify-content: space-between;
-			max-width: 510px;
+			width: 530px;
 			margin-bottom: 70px; 
 		}
 	}
@@ -696,7 +983,7 @@
 		margin-bottom: 25px;
 		width: 100%;
 		@media (min-width: 768px) {
-			max-width: 250px;
+			max-width: 260px;
 			margin: 0;
 			display: block;
 		}
@@ -705,7 +992,7 @@
 		margin-bottom: 35px;
 		width: 100%;
 		@media (min-width: 768px) {
-			max-width: 250px;
+			max-width: 260px;
 			margin: 0;
 			display: block;
 		}
